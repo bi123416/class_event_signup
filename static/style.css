@@ -1,0 +1,231 @@
+/* ===== 全局基础 ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #faf0ff 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ===== 容器 ===== */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ===== 页头 ===== */
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  color: #4a3f8f;
+  margin-bottom: 0.5rem;
+}
+
+.event-desc {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== 表单卡片 ===== */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(74, 63, 143, 0.1);
+}
+
+.form-hint {
+  color: #7c6dba;
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1rem;
+  background: #f3f0ff;
+  border-radius: 8px;
+  border-left: 3px solid #9b8fe0;
+}
+
+/* ===== 表单控件 ===== */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a3f8f;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid #e0d9ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  background: #fafaf9;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #9b8fe0;
+  box-shadow: 0 0 0 3px rgba(155, 143, 224, 0.2);
+  background: #fff;
+}
+
+/* ===== 提交按钮 ===== */
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #7c6dba 0%, #9b8fe0 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(124, 109, 186, 0.35);
+}
+
+.btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(124, 109, 186, 0.45);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ===== 底部链接 ===== */
+footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.link-result {
+  color: #7c6dba;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.link-result:hover {
+  color: #4a3f8f;
+  text-decoration: underline;
+}
+
+/* ===== 结果页统计卡片 ===== */
+.total-card {
+  background: linear-gradient(135deg, #7c6dba 0%, #b39ddb 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(124, 109, 186, 0.3);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===== 各区块 ===== */
+.section-block {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(74, 63, 143, 0.07);
+}
+
+.section-block h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a3f8f;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0eeff;
+}
+
+/* ===== 表格 ===== */
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.result-table th {
+  background: #f3f0ff;
+  color: #4a3f8f;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  text-align: left;
+}
+
+.result-table td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #f0eeff;
+  color: #444;
+}
+
+.result-table tr:last-child td {
+  border-bottom: none;
+}
+
+.result-table tr:hover td {
+  background: #faf8ff;
+}
+
+/* ===== 空提示 ===== */
+.empty-tip {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-card {
+    padding: 1.2rem;
+  }
+
+  .total-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

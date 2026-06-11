@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ event_title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>{{ event_title }}</h1>
+      <p class="event-desc">{{ event_desc }}</p>
+    </header>
+
+    <main class="form-card">
+      <p class="form-hint">{{ form_hint }}</p>
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="请输入你的姓名"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="group">所在小组</label>
+          <select id="group" name="group" required>
+            <option value="" disabled selected>请选择小组</option>
+            {% for g in group_options %}
+            <option value="{{ g }}">{{ g }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="direction">活动方向</label>
+          <select id="direction" name="direction" required>
+            <option value="" disabled selected>请选择活动方向</option>
+            {% for d in direction_options %}
+            <option value="{{ d }}">{{ d }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="note">一句话说明</label>
+          <input
+            type="text"
+            id="note"
+            name="note"
+            placeholder="说说你参加这个方向的理由（可选）"
+          />
+        </div>
+
+        <button type="submit" class="btn-submit">提交报名</button>
+      </form>
+    </main>
+
+    <footer>
+      <a href="/result" class="link-result">查看当前报名统计 &rarr;</a>
+    </footer>
+  </div>
+</body>
+</html>
