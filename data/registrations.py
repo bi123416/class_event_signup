@@ -3,21 +3,21 @@
 
 DEFAULT_REGISTRATIONS = [
     {
-        "name": "示例同学A",
-        "group": "第一组",
-        "direction": "文艺表演",
-        "note": "期待参与！",
+        "name": "python1",
+        "group": "第 1 组",
+        "direction": "Python 网页开发体验",
+        "note": "想学习 Flask 如何把表单数据渲染成动态网页。",
     },
     {
-        "name": "示例同学B",
-        "group": "第二组",
-        "direction": "体育竞技",
-        "note": "加油！",
+        "name": "python2",
+        "group": "第 2 组",
+        "direction": "AI 工具使用分享",
+        "note": "想知道 AI 工具在日常学习中有哪些实用场景。",
     },
     {
-        "name": "示例同学C",
-        "group": "第三组",
+        "name": "python3",
+        "group": "第 3 组",
         "direction": "志愿服务",
-        "note": "很有意义的活动",
+        "note": "觉得做点有意义的事比宅在宿舍好。",
     },
 ]
